@@ -7,7 +7,6 @@ class ContaCorrente:
         self.senha = senha
         self.saldo = saldo
 
-
     def get_consultar_Conta(self):
         print('conta corrente: {}'.format(self.conta))
         print('Agência: {}'.format(self.agencia))
@@ -19,7 +18,8 @@ class ContaCorrente:
         deposito = float(input('Qual valor deseja depositar? '))
         if deposito > 0.00:
             self.saldo = deposito + self.saldo
-            print("Deposito realizado com sucesso! Seu novo saldo é de R$ {:.2f}".format(self.saldo))
+            print("Deposito realizado com sucesso! Seu novo saldo é de R$ {:.2f}".format(
+                self.saldo))
         else:
             print('Seu deposito deve ser maior que zero!')
 
@@ -27,9 +27,11 @@ class ContaCorrente:
         saque = float(input("Qual valor deseja sacar? "))
         if saque <= self.saldo:
             self.saldo = self.saldo - saque
-            print("Saque realizado com sucesso! Seu novo saldo é de R$ {:.2f}".format(self.saldo))
+            print("Saque realizado com sucesso! Seu novo saldo é de R$ {:.2f}".format(
+                self.saldo))
         else:
-            print('Saldo insuficiente para saque. Seu saldo é de R$ {:.2f}'.format(self.saldo))
+            print(
+                'Saldo insuficiente para saque. Seu saldo é de R$ {:.2f}'.format(self.saldo))
 
     def cpf02(self):
         cpf02 = input("Informe seu CPF: ")
@@ -44,6 +46,7 @@ class ContaCorrente:
             inicio()
         else:
             print("Senha Incorreta")
+
 
 def inicio():
     print("Selecione a opção desejada?")
@@ -77,9 +80,10 @@ def finalizar():
         exit()
 
 
-
-cc_01 = ContaCorrente('0123', '0001', 'Erik Viera', '168.478.470-00', '12345', 0.00)
-cc_02 = ContaCorrente('0124', '0001', 'Vitória Futro', '497.423.982-70', '0403', 0.00)
+cc_01 = ContaCorrente('0123', '0001', 'Erik Viera',
+                      '168.478.470-00', '12345', 0.00)
+cc_02 = ContaCorrente('0124', '0001', 'Vitória Futro',
+                      '497.423.982-70', '0403', 0.00)
 
 print("Bem vindo ao banco Erik")
 cc_02.cpf02()
