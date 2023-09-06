@@ -71,9 +71,6 @@ def finalizar():
     print("[1] - Sim \n[2] - Não")
     opcao2 = int(input(""))
     if opcao2 == 1:
-        print("Selecione a opção desejada?")
-        print("[1] - Consultar Conta \n[2] - Deposito \n[3] - Saque \n[4] - Encerrar sessão")
-        opcao = int(input(""))
         inicio()
     else:
         print("Banco Erik agradece!")
